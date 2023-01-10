@@ -9,6 +9,8 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.TheDen.quickbundles.MTN.MtnScrollingFragment
@@ -41,6 +43,9 @@ class ScreenSlidePagerActivity : FragmentActivity() {
 
 
         }
+
+
+
         viewPager = findViewById(R.id.pager)
         tabLayout = findViewById(R.id.tablayout1)
         val pagerAdapter = ScreenSlidePagerAdapter(this)
@@ -49,9 +54,9 @@ class ScreenSlidePagerActivity : FragmentActivity() {
         TabLayoutMediator(tabLayout,viewPager){
             tab,index ->
             tab.text = when(index){
-                0 -> {"Tigo"}
+                0 -> {"MTN"}
                 1-> { "Vodafone" }
-                2 -> {"MTN"}
+                2 -> {"AirtelTigo"}
                 else ->{throw Resources.NotFoundException("Position Not Found") }
 
 
@@ -74,9 +79,9 @@ class ScreenSlidePagerActivity : FragmentActivity() {
 
         override fun createFragment(position: Int): Fragment{
             return when(position){
-                0 -> {TigoScrollingFragment()}
+                0 -> {MtnScrollingFragment()}
                 1 -> {VodafoneScrollingFragment()}
-                2-> {MtnScrollingFragment()}
+                2-> {TigoScrollingFragment()}
                 else ->{throw Resources.NotFoundException("Position Not Found")
                 }
             }
