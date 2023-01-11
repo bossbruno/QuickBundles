@@ -33,7 +33,7 @@ class MtnbundleAdapter(private val BundleNameList : ArrayList<BundleNames>): Rec
         holder.button.text = currentItem.bundleNames
 
         holder.button.setOnClickListener{
-       val clickedbutton = holder.adapterPosition
+            val clickedbutton = holder.adapterPosition
             when(clickedbutton){
                 0 ->{
                     val u = "tel:" + "*135*2*1%23"
@@ -53,8 +53,19 @@ class MtnbundleAdapter(private val BundleNameList : ArrayList<BundleNames>): Rec
                      Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
   }
                 }
-
                 1->{
+                    val u = "tel:" + "*135*2*2%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+
+                2->{
                     val u = "tel:" + "*170%23"
                     val p = Intent(Intent.ACTION_CALL, u.toUri())
                     try{
@@ -65,8 +76,19 @@ class MtnbundleAdapter(private val BundleNameList : ArrayList<BundleNames>): Rec
                     }
 
                 }
-                2->{
+                3->{
                     val u = "tel:" + "*124%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+                4->{
+                    val u = "tel:" + "*567%23"
                     val p = Intent(Intent.ACTION_CALL, u.toUri())
                     try{
                         holder.itemView.context.startActivity(p)
