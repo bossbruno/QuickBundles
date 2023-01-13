@@ -1,4 +1,4 @@
-package com.TheDen.quickbundles.Tigo
+package com.TheDen.quickbundles.Vodafone
 
 
 import android.content.Intent
@@ -14,7 +14,7 @@ import com.TheDen.quickbundles.BundleNames
 import com.TheDen.quickbundles.R
 
 
-class TigoBundleAdapter(private val BundleNameList : ArrayList<BundleNames>): RecyclerView.Adapter< TigoBundleAdapter.MyViewHolder>() {
+class VoadafoneBundleAdapter(private val BundleNameList : ArrayList<BundleNames>): RecyclerView.Adapter< VoadafoneBundleAdapter.MyViewHolder>() {
     val REQUEST_CALL_PERMISSION = 1
 
 
@@ -23,7 +23,7 @@ class TigoBundleAdapter(private val BundleNameList : ArrayList<BundleNames>): Re
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
 
-        val itemView= LayoutInflater.from(parent.context).inflate(R.layout.tigo_list_item,parent,false)
+        val itemView= LayoutInflater.from(parent.context).inflate(R.layout.vodafone_list_item,parent,false)
         return MyViewHolder(itemView)
     }
 
@@ -69,7 +69,7 @@ class TigoBundleAdapter(private val BundleNameList : ArrayList<BundleNames>): Re
 
                 }
                 2->{
-                    val u = "tel:" + "*703%23"
+                    val u = "tel:" + "*127%23"
                     val p = Intent(Intent.ACTION_CALL, u.toUri())
                     try{
                         holder.itemView.context.startActivity(p)
@@ -79,13 +79,13 @@ class TigoBundleAdapter(private val BundleNameList : ArrayList<BundleNames>): Re
                     }
 
                 }
-    }
-
-
             }
 
 
         }
+
+
+    }
 
     override fun getItemCount(): Int {
         return BundleNameList.size
@@ -94,7 +94,7 @@ class TigoBundleAdapter(private val BundleNameList : ArrayList<BundleNames>): Re
 
     class MyViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
 
-        val button : Button = itemView.findViewById(R.id.button_tigo)
+        val button : Button = itemView.findViewById(R.id.button_vodafone)
     }
 
 }
