@@ -98,6 +98,30 @@ class MtnbundleAdapter(private val BundleNameList : ArrayList<BundleNames>): Rec
                     }
 
                 }
+                5->{
+                val u = "tel:" + "*175*1%23"
+                val p = Intent(Intent.ACTION_CALL, u.toUri())
+                try{
+                    holder.itemView.context.startActivity(p)
+                }catch (s: SecurityException) {
+                    Log.e("Dial error", "$s")
+                    Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                }
+
+            }
+                5->{
+                    val u = "tel:" + "*400%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+
+
             }
 
 

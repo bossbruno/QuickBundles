@@ -39,7 +39,19 @@ class VoadafoneBundleAdapter(private val BundleNameList : ArrayList<BundleNames>
         holder.button.setOnClickListener{
             val clickedbutton = holder.adapterPosition
             when(clickedbutton){
-                0 ->{
+
+                0->{
+                    val u = "tel:" + "*151%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+                1 ->{
                     val u = "tel:" + "*124%23"
                     // Create the intent and set the data for the
                     // intent as the phone number.
@@ -57,7 +69,7 @@ class VoadafoneBundleAdapter(private val BundleNameList : ArrayList<BundleNames>
                         Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
                     }
                 }
-                1->{
+                2->{
                     val u = "tel:" + "*110%23"
                     val p = Intent(Intent.ACTION_CALL, u.toUri())
                     try{
@@ -68,7 +80,7 @@ class VoadafoneBundleAdapter(private val BundleNameList : ArrayList<BundleNames>
                     }
 
                 }
-                2->{
+                3->{
                     val u = "tel:" + "*127%23"
                     val p = Intent(Intent.ACTION_CALL, u.toUri())
                     try{
@@ -79,6 +91,39 @@ class VoadafoneBundleAdapter(private val BundleNameList : ArrayList<BundleNames>
                     }
 
                 }
+                4->{
+                    val u = "tel:" + "*126%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+                5->{
+                    val u = "tel:" + "*200%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+                6->{
+                val u = "tel:" + "*530%23"
+                val p = Intent(Intent.ACTION_CALL, u.toUri())
+                try{
+                    holder.itemView.context.startActivity(p)
+                }catch (s: SecurityException) {
+                    Log.e("Dial error", "$s")
+                    Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                }
+
+            }
             }
 
 

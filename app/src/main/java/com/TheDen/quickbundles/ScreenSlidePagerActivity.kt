@@ -56,8 +56,8 @@ class ScreenSlidePagerActivity : FragmentActivity() {
             tab,index ->
             tab.text = when(index){
                 0 -> {"MTN"}
-                1-> { "Vodafone" }
-                2 -> {"AirtelTigo"}
+                1-> { "VODAFONE" }
+                2 -> {"AIRTELTIGO"}
                 else ->{throw Resources.NotFoundException("Position Not Found") }
 
 

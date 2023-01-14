@@ -35,9 +35,14 @@ class VodafoneScrollingFragment : Fragment() {
     private  fun dataInitialize(){
         BundleNamesList = arrayListOf<BundleNames>()
         bundleNames= arrayOf(
+            "VODAFONE INFORMATION SERVICE \n*151#",
             "VODAFONE CHECK CREDIT BALANCE\n *124#",
             "VODAFONE CASH\n *110#",
-            "CHECK YOUR NUMBER\n *127#"
+            "CHECK YOUR NUMBER\n *127#",
+            "CHECK BUNDLE BALANCE\n *126# ",
+            "VODAFONE RED \n *200#",
+            "VODAFONE INTERNET PACKAGES\n *700#",
+            "VODAFONE MADE FOR ME\n *530#"
 
         )
         for (i in bundleNames.indices){

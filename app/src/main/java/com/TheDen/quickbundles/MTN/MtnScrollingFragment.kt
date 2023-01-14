@@ -43,7 +43,9 @@ class MtnScrollingFragment : Fragment() {
             "MTN ZONE CHECK BALANCE\n *135*2*2#",
             "MTN MOBILE MONEY\n *170#",
             "MTN CHECK BALANCE \n*124#",
-            "MTN PULSE \n *567#"
+            "MTN PULSE \n *567#",
+            "CHECK YOUR SUBSCRIPTIONS\n *175#",
+            "check if number is registered\n *400#"
 
 
                 )
