@@ -37,7 +37,14 @@ class TigoScrollingFragment : Fragment() {
         bundleNames= arrayOf(
             "TIGO CHECK CREDIT BALANCE\n *124#",
             "TIGO CASH\n *110#",
-            "CHECK YOUR NUMBER\n *703#"
+            "CHECK YOUR NUMBER\n *703#",
+            "TIGO INTERNET PACKAGES \n *111#",
+        "CALL CENTER \n 100",
+            "My best Offer\n*533#",
+            "Check Bonus \n*504#",
+            "airteltigo self-service\n *100#",
+            "CHECK YOUR NUMBER \n *400#",
+            "Tigo Sim Borrow data \n *589#"
 
         )
         for (i in bundleNames.indices){

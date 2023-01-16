@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.TheDen.quickbundles.MTN.MtnScrollingFragment
+import com.TheDen.quickbundles.R.*
 import com.TheDen.quickbundles.Tigo.TigoScrollingFragment
 import com.TheDen.quickbundles.Vodafone.VodafoneScrollingFragment
 import com.google.android.material.tabs.TabLayout
@@ -22,7 +23,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 private  const val  NUM_PAGES = 3
 val REQUEST_CALL_PERMISSION =1
-class ScreenSlidePagerActivity : FragmentActivity() {
+class ScreenSlidePagerActivity : AppCompatActivity()  {
     private lateinit var  viewPager : ViewPager2
 
     private lateinit var tabLayout: TabLayout
@@ -30,7 +31,8 @@ class ScreenSlidePagerActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_screen_slide)
+        setContentView(layout.activity_screen_slide)
+        setSupportActionBar(findViewById(id.mytoolbar))
 
         val permission = Manifest.permission.CALL_PHONE
 
@@ -47,8 +49,8 @@ class ScreenSlidePagerActivity : FragmentActivity() {
 
 
 
-        viewPager = findViewById(R.id.pager)
-        tabLayout = findViewById(R.id.tablayout1)
+        viewPager = findViewById(id.pager)
+        tabLayout = findViewById(id.tablayout1)
         val pagerAdapter = ScreenSlidePagerAdapter(this)
         viewPager.adapter = pagerAdapter
         viewPager.setPageTransformer(ZoomOutPageTransformer())

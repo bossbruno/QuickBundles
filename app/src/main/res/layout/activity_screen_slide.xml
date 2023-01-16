@@ -10,6 +10,18 @@
     app:layout_constraintTop_toTopOf="parent"
     tools:context=".ScreenSlidePagerActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mytoolbar"
+        android:layout_width="408dp"
+        android:layout_height="85dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
 
     <androidx.viewpager2.widget.ViewPager2
 
@@ -32,8 +44,9 @@
         android:id="@+id/tablayout1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/mytoolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

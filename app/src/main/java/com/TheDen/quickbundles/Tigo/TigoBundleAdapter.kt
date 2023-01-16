@@ -79,6 +79,83 @@ class TigoBundleAdapter(private val BundleNameList : ArrayList<BundleNames>): Re
                     }
 
                 }
+                3->{
+                    val u = "tel:" + "*111%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+                4->{
+                    val u = "tel:" + "100"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+                5->{
+                    val u = "tel:" + "*533%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+                6->{
+                    val u = "tel:" + "*504%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+                7->{
+                    val u = "tel:" + "*100%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+                8->{
+                    val u = "tel:" + "*400%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
+                9->{
+                    val u = "tel:" + "*589%23"
+                    val p = Intent(Intent.ACTION_CALL, u.toUri())
+                    try{
+                        holder.itemView.context.startActivity(p)
+                    }catch (s: SecurityException) {
+                        Log.e("Dial error", "$s")
+                        Toast.makeText(ctx, "$s", Toast.LENGTH_LONG).show()
+                    }
+
+                }
     }
 
 
