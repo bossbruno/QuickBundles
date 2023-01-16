@@ -35,9 +35,9 @@ class TigoScrollingFragment : Fragment() {
     private  fun dataInitialize(){
         BundleNamesList = arrayListOf<BundleNames>()
         bundleNames= arrayOf(
-            "TIGO CHECK BALANCE",
-            "TIGO CASH",
-            "CHECK YOUR NUMBER"
+            "TIGO CHECK CREDIT BALANCE\n *124#",
+            "TIGO CASH\n *110#",
+            "CHECK YOUR NUMBER\n *703#"
 
         )
         for (i in bundleNames.indices){

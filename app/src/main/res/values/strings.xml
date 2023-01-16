@@ -92,4 +92,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tigo_bundle">TIGO BUNDLE</string>
+    <string name="vodafonebundle">vodafone bundle</string>
+    <string name="mtn_zone_bundle">MTN ZONE BUNDLE</string>
 </resources>

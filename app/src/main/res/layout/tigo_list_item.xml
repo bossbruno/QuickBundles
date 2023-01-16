@@ -6,12 +6,12 @@
 
     <Button
         android:id="@+id/button_tigo"
-        android:layout_width="405dp"
-        android:layout_height="70dp"
+        android:layout_width="389dp"
+        android:layout_height="64dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@drawable/tigo_gradientbutton"
         android:text="@string/tigo_bundle"
         android:textColor="@android:color/background_light"
         android:textSize="20sp"
