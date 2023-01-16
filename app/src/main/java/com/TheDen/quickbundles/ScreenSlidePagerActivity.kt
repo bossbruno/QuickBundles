@@ -3,7 +3,6 @@ package com.TheDen.quickbundles
 import android.Manifest
 import android.content.pm.PackageManager
 import android.content.res.Resources
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.ActivityCompat
@@ -56,8 +55,8 @@ class ScreenSlidePagerActivity : FragmentActivity() {
             tab,index ->
             tab.text = when(index){
                 0 -> {"MTN"}
-                1-> { "VODAFONE" }
-                2 -> {"AIRTELTIGO"}
+                1-> { "Vodafone" }
+                2 -> {"AirtelTigo"}
                 else ->{throw Resources.NotFoundException("Position Not Found") }
 
 

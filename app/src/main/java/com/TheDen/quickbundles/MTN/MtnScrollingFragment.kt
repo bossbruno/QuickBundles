@@ -39,14 +39,9 @@ class MtnScrollingFragment : Fragment() {
     private  fun dataInitialize(){
         BundleNamesList = arrayListOf<BundleNames>()
         bundleNames= arrayOf(
-                "MTN ZONE bundles\n *135*2*1#",
-            "MTN ZONE CHECK BALANCE\n *135*2*2#",
-            "MTN MOBILE MONEY\n *170#",
-            "MTN CHECK BALANCE \n*124#",
-            "MTN PULSE \n *567#",
-            "CHECK YOUR SUBSCRIPTIONS\n *175#",
-            "check if number is registered\n *400#"
-
+                "MTN ZONE",
+            "MTN MOBILE MONEY",
+            "CHECK BALANCE"
 
                 )
 for (i in bundleNames.indices){
