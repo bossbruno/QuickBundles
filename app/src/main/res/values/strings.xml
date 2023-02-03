@@ -94,4 +94,5 @@
     <string name="tigo_bundle">TIGO BUNDLE</string>
     <string name="vodafonebundle">vodafone bundle</string>
     <string name="mtn_zone_bundle">MTN ZONE BUNDLE</string>
+    <string name="tablayout_description">Shows the name of the various fragment tabs</string>
 </resources>
