@@ -18,20 +18,71 @@ import com.TheDen.quickbundles.ScreenSlidePagerActivity
 class MtnbundleAdapter(private val BundleNameList : ArrayList<BundleNames>): RecyclerView.Adapter< MtnbundleAdapter.MyViewHolder>() {
 
 
-
+    private val BUTTONSTATE = "BUTTON_STATE"
+    private val NOTFAV = "Notfavourite"
+    private val FAV = "Favourite"
+    private var button_state = "Notfavourite"
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
        val itemView= LayoutInflater.from(parent.context).inflate(R.layout.mtn_list_item,parent,false)
 
         return MyViewHolder(itemView)
+
+
     }
 
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+
+        fun setfavButton() {
+
+            if (button_state == FAV)
+            {
+                holder.mtnfavbutton.setBackgroundResource(R.drawable.ic_baseline_star_24)
+
+            }
+
+            else {
+                holder.mtnfavbutton.setBackgroundResource(R.drawable.ic_baseline_star_outline_24)
+            }
+        }
+
+        fun Clickfav(){
+            when (button_state){
+                NOTFAV->{
+                    button_state = FAV
+                }
+
+                FAV -> {
+                    button_state=NOTFAV
+                }
+
+            }
+            setfavButton()
+        }
+
+
+
  val currentItem = BundleNameList[position]
         val ctx = holder.itemView.context
         holder.button.text = currentItem.bundleNames
 
+
+
+
+
+      holder.mtnfavbutton.setOnClickListener{
+//          var button_background  = 1;
+//
+//          if(  button_background == 1){
+//                holder.mtnfavbutton.setBackgroundResource(R.drawable.ic_baseline_star_24)
+//            }
+Clickfav()
+
+        }
+
+        //
         holder.button.setOnClickListener{
             val clickedbutton = holder.adapterPosition
             when(clickedbutton){
@@ -135,9 +186,15 @@ class MtnbundleAdapter(private val BundleNameList : ArrayList<BundleNames>): Rec
     }
 
 
+
+
     class MyViewHolder(itemView: View) :RecyclerView.ViewHolder(itemView){
 
 val button : Button = itemView.findViewById(R.id.button)
+        val mtnfavbutton : Button = itemView.findViewById(R.id.mtn_favbutton)
+
     }
+
+
 
 }

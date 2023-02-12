@@ -20,4 +20,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mtn_favbutton3"
+        android:layout_width="54dp"
+        android:layout_height="47dp"
+
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/ic_baseline_star_outline_24"
+        app:layout_constraintBottom_toBottomOf="@+id/button_vodafone"
+        app:layout_constraintEnd_toEndOf="@+id/button_vodafone"
+        app:layout_constraintTop_toTopOf="@+id/button_vodafone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
